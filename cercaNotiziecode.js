@@ -54,7 +54,8 @@ function Cerca(event) {
 }
 
 function prendiDati(testoRicerca, fonti, doveCercare, ordinaPer, dataDa, dataA) {
-    const ulrBase = `https://newsapi.org/v2/everything?q=${encodeURIComponent(testoRicerca)}&language=it&sortBy=${ordinaPer}&searchIn=${doveCercare}&apiKey=28a6b56460854d84a390b75a5590bf18`;
+    var apiKey = window.config.apiKey;
+    const ulrBase = `https://newsapi.org/v2/everything?q=${encodeURIComponent(testoRicerca)}&language=it&sortBy=${ordinaPer}&searchIn=${doveCercare}&apiKey=${apiKey}`;
     const parametriAggiuntivi = new URLSearchParams();
     let uriConParametri = " ";
     if (dataDa != "") {

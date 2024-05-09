@@ -1,5 +1,5 @@
 
-const apiKey = '28a6b56460854d84a390b75a5590bf18';
+var apiKey = window.config.apiKey;
 
 function caricaNotizie(paese, listaId) {
     const apiUrl = `https://newsapi.org/v2/top-headlines?country=${paese}&apiKey=${apiKey}`;

@@ -1,5 +1,5 @@
 //prima pagina.
-const apiKey = '28a6b56460854d84a390b75a5590bf18';
+var apiKey = window.config.apiKey;
 let apiUrl = 'https://newsapi.org/v2/everything?domains=corriere.it&language=it&pageSize=4&apiKey=' + apiKey;
 fetch(apiUrl)
     .then(response => response.json())
